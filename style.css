@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+   background: linear-gradient(135deg, #00f7ff, #004d99); 
+    position: relative;
+    min-height: 100vh;
+}
+
+.squares {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.square {
+    width: 80px;
+    height: 80px;
+    border: 3px solid rgb(0, 0, 0);
+    background: transparent; /* Transparent background */
+    position: absolute;
+    opacity: 1; /* Start with opacity 1 */
+    transform: rotate(0deg); /* Start with no rotation */
+    animation: moveRotateOpacity 5s infinite; /* Apply animation */
+}
+
+@keyframes moveRotateOpacity {
+    0% {
+        opacity: 1;
+        scale: 0;
+    }
+    100% {
+        transform: rotate(90deg); /* Final translation */
+        opacity: 0;
+        scale: 1;
+        
+    }
+}
+
+/* Specific start position for each square */
+.square:nth-child(1) { left: 10%; top: 10%; }
+.square:nth-child(2) { left: 50%; top: 13%; }
+.square:nth-child(3) { left: 30%; top: 60%; }
+.square:nth-child(4) { left: 88%; top: 10%; }
+.square:nth-child(5) { left: 40%; top: 80%; }
+.square:nth-child(6) { left: 60%; top: 50%; }
+.square:nth-child(7) { left: 10%; top: 80%; }
+.square:nth-child(8) { left: 86%; top: 72%; }
+.square:nth-child(9) { left: 30%; top: 20%; }
+.square:nth-child(10) { left: 70%; top: 70%; }
